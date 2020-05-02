@@ -1,6 +1,6 @@
 <template>
   <div>
-  <p>いいね({{ number }})</p>
+  <p>いいね({{ number / 2 }})</p>
   <button @click="increment">+1</button>
   </div>
 </template>
@@ -9,7 +9,6 @@
 export default {
   data() {
     return {
-      number: 5
     };
   },
   methods: {
