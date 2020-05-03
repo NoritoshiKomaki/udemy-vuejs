@@ -3,12 +3,9 @@ import App from './App.vue'
 import LikeNumber from "./components/LikeNumber.vue"
 Vue.config.productionTip = false
 Vue.component("LikeNumber", LikeNumber)
-Vue.directive("border", {
-  bind() {},
-  inserted() {},
-  update() {},
-  componentUpdated() {},
-  unbind() {}
+Vue.filter("upperCase", function(value) {
+  console.log('フィルタ');
+  return value.toUpperCase();
 });
 
 new Vue({
