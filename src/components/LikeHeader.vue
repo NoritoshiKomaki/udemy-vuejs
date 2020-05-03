@@ -1,20 +1,18 @@
 <template>
   <div>
-    <slot name="title"></slot>
-    <hr>
-    <p>いいねの数</p>
-    <slot name="number"></slot>
+    <slot></slot>
   </div>
 </template>
 
 <script>
 export default {
-  props: ["headerText"]
+  data() {
+    return {
+      user: {
+        firstName: 'Jack',
+        lastName: 'Donald'
+      }
+    }
+  }
 }
 </script>
-
-<style scoped>
-  h1 {
-    color: red;
-  }
-</style>
