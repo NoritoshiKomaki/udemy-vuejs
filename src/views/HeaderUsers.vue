@@ -8,7 +8,7 @@
       class="link"
     >Home</router-link>
     <router-link 
-      to="/users/1/profile" 
+      :to="{ name: 'users-id-profile', params: { id: 1 }, query: { lang: 'ja', page: 2}, hash: '#next-user' }" 
       active-class="link--active"
       exact
       class="link"

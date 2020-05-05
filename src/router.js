@@ -32,8 +32,25 @@ export default new Router({
     ]
   },
   {
-    path: "/hello",
-    redirect: "/"
+    path: "*",
+    redirect: "/" 
   }
-]
+],
+scrollBehavior(to, from, savedPosition) {
+  return new Promise(resolve => {
+    this.app.$root.$once('triggerScroll', () => {
+      let position = { x: 0, y: 0};
+      if (savedPosition) {
+        position = savedPosition;
+        console.log(savedPosition)
+      }
+      if (to.hash) {
+        position = {
+          selector: to.hash
+        };
+      }
+      resolve(position);
+    });
+  });
+}
 });

@@ -8,7 +8,7 @@
       class="link"
     >Home</router-link>
     <router-link 
-      to="/users/1/profile" 
+      to="/users/1/profile#next-user" 
       active-class="link--active"
       exact
       class="link"
